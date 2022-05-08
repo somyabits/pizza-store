@@ -14,3 +14,9 @@ springboot REST based pizza store application
 * Update restaurant details (identified by id): 
   * `curl -v -H "Content-Type: application/json" -X PUT -u "admin:admin" -d '{"name":"Updated","city":"Kuopio","address":"Hatanpäänvaltatie 1","email":"pizza_kuopio@amarillo.fi","phone":"0210 716 328","open_at":"12:00:00","close_at":"23:00:00"}' http://localhost:8080/rest/restaurant/1`
   * (with wrong authentication, thus expected to fail) `curl -v -H "Content-Type: application/json" -X PUT -u "admin:admi" -d '{"name":"Updated","city":"Kuopio","address":"Hatanpäänvaltatie 1","email":"pizza_kuopio@amarillo.fi","phone":"0210 716 328","open_at":"12:00:00","close_at":"23:00:00"}' http://localhost:8080/rest/restaurant/1`
+
+* Delete specific restaurant (identified by id)
+  * `curl -v -H "Content-Type: application/json" -X DELETE -u "admin:admin" http://localhost:8080/rest/restaurant/1`
+  * (without authentication, thus expected to fail) `curl -v -H "Content-Type: application/json" -X DELETE http://localhost:8080/rest/restaurant/2`
+
+* List all pizzas of specific restaurant: `curl -v -H "Content-Type: application/json" -X GET http://localhost:8080/rest/pizzas?restaurant_id=1`
