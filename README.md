@@ -1,12 +1,21 @@
 # pizza-store
 springboot REST based pizza store application
 
+
+# Environment Requirement
+* Internet connection
+* Preferably Linux with Maven, Curl and Java 8 (Compiler and JRE)
+
+# How to Compile and Run
+`cd` to this project home directory, where pom.xml is located
+* Compile with command: `mvn clean package -Dspring.profiles.active=derby`
+* Run With command: `java -Dspring.profiles.active=derby -jar target/restaurant-0.0.1-SNAPSHOT.jar`
+
 # Changes made by 2021MT93200@wilp.bits-pilani.ac.in
 View the available pizzas
 Ability to order the Pizzas
 Customize the Pizza
 
-# add more details here
 # Changes made by 2021MT93200@wilp.bits-pilani.ac.in
 Making changes to the order
 Cancel the order
