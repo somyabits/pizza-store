@@ -1,5 +1,5 @@
 # pizza-store
-springboot REST based pizza store application
+springboot REST based pizza store application used to run which gives apis to create pizza store
 
 
 # Environment Requirement
